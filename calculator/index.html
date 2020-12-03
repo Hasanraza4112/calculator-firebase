@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>simple calculator using pure javascript</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm">
+			<p>
+				<button class="btn btn-primary clears" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">History</button>
+
+			  </p>
+			  <div class="collapse" id="collapseExample">
+				<div class="card card-body">
+					<ul >
+						<li><button class="clears" onclick="del()">Clear </button><ul id="list"></ul></li>
+											</ul>
+
+				</div>
+			  </div>		  </div>
+		  <div class="col-sm">
+			<div class="main">
+				<form class="calculatorForm" name="calculatorForm">
+					<div class="screen">
+						<input type="text" name="screen" class="screen" id="input" value="" readonly />
+					</div>
+					<div class="btn">
+						<input type="button" name="clear" value="clear"  onclick="Clear()" />
+					</div>
+					<div class="btn">
+						<input type="button" name="num1" value="1" onclick="valueButton(this)" />
+						<input type="button" name="num2" value="2" onclick="valueButton(this)" />
+						<input type="button" name="num3" value="3" onclick="valueButton(this)" />
+						<input type="button" name="plus" value="+" onclick="valueButton(this)" />
+					</div>
+					<div class="btn">
+						<input type="button" name="num4" value="4" onclick="valueButton(this)" />
+						<input type="button" name="num5" value="5" onclick="valueButton(this)" />
+						<input type="button" name="num6" value="6" onclick="valueButton(this)" />
+						<input type="button" name="sub" value="-" onclick="valueButton(this)" />
+					</div>
+					<div class="btn">
+						<input type="button" name="num7" value="7" onclick="valueButton(this)" />
+						<input type="button" name="num8" value="8" onclick="valueButton(this)" />
+						<input type="button" name="num9" value="9" onclick="valueButton(this)" />
+						<input type="button" name="mul" value="*" onclick="valueButton(this)" />
+					</div>
+					<div class="btn">
+						<input type="button" name="num0" value="0" onclick="valueButton(this)" />
+						<input type="button" name="div" value="/" onclick="valueButton(this)" />
+						<input type="button" name="equal" value="=" onclick="Calculate()" />
+					</div>
+				</form>
+			</div>  </div>
+
+		</div>
+	  </div>
+	
+
+	<!-- script -->
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+	  apiKey: "AIzaSyBYb72PGzZdKvCqzEzXrgx6rZAKjwUYjcc",
+	  authDomain: "calculator-a1.firebaseapp.com",
+	  databaseURL: "https://calculator-a1-default-rtdb.firebaseio.com",
+	  projectId: "calculator-a1",
+	  storageBucket: "calculator-a1.appspot.com",
+	  messagingSenderId: "447190706009",
+	  appId: "1:447190706009:web:34cdcbc7bc4b372ba80e48"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+
+<!-- firebase end -->
+
+	<script src="index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
